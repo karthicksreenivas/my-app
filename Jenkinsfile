@@ -25,8 +25,8 @@ node{
     }
      stage('Nexus Image Push'){
    sh "docker login -u admin -p admin123 13.233.80.215:8085"
-   sh "docker tag karthi/newapp 13.233.80.215:8085/nex1"
-   sh 'docker push 13.233.80.215:8085/nex1'
+   sh "docker tag karthi/newapp 13.233.80.215:8085/nex1:01"
+   sh 'docker push 13.233.80.215:8085/nex1:01'
    }   
    stage('Remove Previous Container'){
 	try{
